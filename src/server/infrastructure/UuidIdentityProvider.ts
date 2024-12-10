@@ -1,10 +1,8 @@
 import {randomUUID} from 'node:crypto';
-import {IIdentityProvider} from "@/src/server/application/ports/IIdentityProvider";
+import {IdentityProviderPort} from "@/src/server/application/ports/IdentityProviderPort";
 
-export const UuidIdentityProvider = (): IIdentityProvider => {
-    return {
-        generateId(): string {
-            return randomUUID();
-        }
-    };
+export class UuidIdentityProvider implements IdentityProviderPort {
+    generateId(): string {
+        return randomUUID();
+    }
 }

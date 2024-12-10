@@ -1,3 +1,124 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>dependency graph</title>
+    <style>
+      .node:active path,
+.node:hover path,
+.node.current path,
+.node:active polygon,
+.node:hover polygon,
+.node.current polygon {
+  stroke: fuchsia;
+  stroke-width: 2;
+}
+
+.edge:active path,
+.edge:hover path,
+.edge.current path,
+.edge:active ellipse,
+.edge:hover ellipse,
+.edge.current ellipse {
+  stroke: url(#edgeGradient);
+  stroke-width: 3;
+  stroke-opacity: 1;
+}
+
+.edge:active polygon,
+.edge:hover polygon,
+.edge.current polygon {
+  stroke: fuchsia;
+  stroke-width: 3;
+  fill: fuchsia;
+  stroke-opacity: 1;
+  fill-opacity: 1;
+}
+
+.edge:active text,
+.edge:hover text {
+  fill: fuchsia;
+}
+
+.cluster path {
+  stroke-width: 3;
+}
+
+.cluster:active path,
+.cluster:hover path {
+  fill: #ffff0011;
+}
+
+div.hint {
+  background-color: #000000aa;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 1rem;
+  position: fixed;
+  top: calc(50% - 4em);
+  right: calc(50% - 10em);
+  border: none;
+  padding: 1em 3em 1em 1em;
+}
+
+.hint button {
+  position: absolute;
+  font-weight: bolder;
+  right: 0.6em;
+  top: 0.6em;
+  color: inherit;
+  background-color: inherit;
+  border: 1px solid currentColor;
+  border-radius: 1em;
+  margin-left: 0.6em;
+}
+
+.hint a {
+  color: inherit;
+}
+
+#button_help {
+  color: white;
+  background-color: #00000011;
+  border-radius: 1em;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  font-size: 24pt;
+  font-weight: bolder;
+  width: 2em;
+  height: 2em;
+  border: none;
+}
+
+#button_help:hover {
+  cursor: pointer;
+  background-color: #00000077;
+}
+
+@media print {
+  #button_help {
+    display: none;
+  }
+
+  div.hint {
+    display: none;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <button id="button_help">?</button>
+    <div id="hints" class="hint" style="display: none">
+      <button id="close-hints">x</button>
+      <span id="hint-text"></span>
+      <ul>
+        <li><b>Hover</b> - highlight</li>
+        <li><b>Right-click</b> - pin highlight</li>
+        <li><b>ESC</b> - clear</li>
+      </ul>
+    </div>
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
@@ -117,7 +238,7 @@
 <!-- app/_components/Background/Background.tsx -->
 <g id="node1" class="node">
 <title>app/_components/Background/Background.tsx</title>
-<g id="a_node1"><a xlink:href="app/_components/Background/Background.tsx" xlink:title="Background.tsx">
+<g id="a_node1"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/app/_components/Background/Background.tsx" xlink:title="Background.tsx">
 <path fill="#bbfeff" stroke="black" d="M245.58,-158.25C245.58,-158.25 178.92,-158.25 178.92,-158.25 175.83,-158.25 172.75,-155.17 172.75,-152.08 172.75,-152.08 172.75,-145.92 172.75,-145.92 172.75,-142.83 175.83,-139.75 178.92,-139.75 178.92,-139.75 245.58,-139.75 245.58,-139.75 248.67,-139.75 251.75,-142.83 251.75,-145.92 251.75,-145.92 251.75,-152.08 251.75,-152.08 251.75,-155.17 248.67,-158.25 245.58,-158.25"/>
 <text text-anchor="start" x="180.75" y="-145.7" font-family="Helvetica,sans-Serif" font-size="9.00">Background.tsx</text>
 </a>
@@ -126,7 +247,7 @@
 <!-- app/_hooks/useDependency.tsx -->
 <g id="node2" class="node">
 <title>app/_hooks/useDependency.tsx</title>
-<g id="a_node2"><a xlink:href="app/_hooks/useDependency.tsx" xlink:title="useDependency.tsx">
+<g id="a_node2"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/app/_hooks/useDependency.tsx" xlink:title="useDependency.tsx">
 <path fill="#bbfeff" stroke="black" d="M114.08,-58.25C114.08,-58.25 30.17,-58.25 30.17,-58.25 27.08,-58.25 24,-55.17 24,-52.08 24,-52.08 24,-45.92 24,-45.92 24,-42.83 27.08,-39.75 30.17,-39.75 30.17,-39.75 114.08,-39.75 114.08,-39.75 117.17,-39.75 120.25,-42.83 120.25,-45.92 120.25,-45.92 120.25,-52.08 120.25,-52.08 120.25,-55.17 117.17,-58.25 114.08,-58.25"/>
 <text text-anchor="start" x="32" y="-45.7" font-family="Helvetica,sans-Serif" font-size="9.00">useDependency.tsx</text>
 </a>
@@ -135,7 +256,7 @@
 <!-- app/_providers/DependencyProvider.tsx -->
 <g id="node3" class="node">
 <title>app/_providers/DependencyProvider.tsx</title>
-<g id="a_node3"><a xlink:href="app/_providers/DependencyProvider.tsx" xlink:title="DependencyProvider.tsx">
+<g id="a_node3"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/app/_providers/DependencyProvider.tsx" xlink:title="DependencyProvider.tsx">
 <path fill="#bbfeff" stroke="black" d="M263.96,-58.25C263.96,-58.25 160.54,-58.25 160.54,-58.25 157.46,-58.25 154.38,-55.17 154.38,-52.08 154.38,-52.08 154.38,-45.92 154.38,-45.92 154.38,-42.83 157.46,-39.75 160.54,-39.75 160.54,-39.75 263.96,-39.75 263.96,-39.75 267.04,-39.75 270.12,-42.83 270.12,-45.92 270.12,-45.92 270.12,-52.08 270.12,-52.08 270.12,-55.17 267.04,-58.25 263.96,-58.25"/>
 <text text-anchor="start" x="162.38" y="-45.7" font-family="Helvetica,sans-Serif" font-size="9.00">DependencyProvider.tsx</text>
 </a>
@@ -150,7 +271,7 @@
 <!-- src/client/DependencyInjection.ts -->
 <g id="node4" class="node">
 <title>src/client/DependencyInjection.ts</title>
-<g id="a_node4"><a xlink:href="src/client/DependencyInjection.ts" xlink:title="DependencyInjection.ts">
+<g id="a_node4"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/client/DependencyInjection.ts" xlink:title="DependencyInjection.ts">
 <path fill="#ddfeff" stroke="black" d="M440.71,-42.25C440.71,-42.25 341.04,-42.25 341.04,-42.25 337.96,-42.25 334.88,-39.17 334.88,-36.08 334.88,-36.08 334.88,-29.92 334.88,-29.92 334.88,-26.83 337.96,-23.75 341.04,-23.75 341.04,-23.75 440.71,-23.75 440.71,-23.75 443.79,-23.75 446.88,-26.83 446.88,-29.92 446.88,-29.92 446.88,-36.08 446.88,-36.08 446.88,-39.17 443.79,-42.25 440.71,-42.25"/>
 <text text-anchor="start" x="342.88" y="-29.7" font-family="Helvetica,sans-Serif" font-size="9.00">DependencyInjection.ts</text>
 </a>
@@ -171,7 +292,7 @@
 <!-- app/_providers/ReactQueryClientProvider.tsx -->
 <g id="node5" class="node">
 <title>app/_providers/ReactQueryClientProvider.tsx</title>
-<g id="a_node5"><a xlink:href="app/_providers/ReactQueryClientProvider.tsx" xlink:title="ReactQueryClientProvider.tsx">
+<g id="a_node5"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/app/_providers/ReactQueryClientProvider.tsx" xlink:title="ReactQueryClientProvider.tsx">
 <path fill="#bbfeff" stroke="black" d="M274.08,-89.25C274.08,-89.25 150.42,-89.25 150.42,-89.25 147.33,-89.25 144.25,-86.17 144.25,-83.08 144.25,-83.08 144.25,-76.92 144.25,-76.92 144.25,-73.83 147.33,-70.75 150.42,-70.75 150.42,-70.75 274.08,-70.75 274.08,-70.75 277.17,-70.75 280.25,-73.83 280.25,-76.92 280.25,-76.92 280.25,-83.08 280.25,-83.08 280.25,-86.17 277.17,-89.25 274.08,-89.25"/>
 <text text-anchor="start" x="152.25" y="-76.7" font-family="Helvetica,sans-Serif" font-size="9.00">ReactQueryClientProvider.tsx</text>
 </a>
@@ -186,7 +307,7 @@
 <!-- app/globals.css -->
 <g id="node6" class="node">
 <title>app/globals.css</title>
-<g id="a_node6"><a xlink:href="app/globals.css" xlink:title="globals.css">
+<g id="a_node6"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/app/globals.css" xlink:title="globals.css">
 <path fill="#ffffcc" stroke="black" d="M236.96,-238.25C236.96,-238.25 187.54,-238.25 187.54,-238.25 184.46,-238.25 181.38,-235.17 181.38,-232.08 181.38,-232.08 181.38,-225.92 181.38,-225.92 181.38,-222.83 184.46,-219.75 187.54,-219.75 187.54,-219.75 236.96,-219.75 236.96,-219.75 240.04,-219.75 243.12,-222.83 243.12,-225.92 243.12,-225.92 243.12,-232.08 243.12,-232.08 243.12,-235.17 240.04,-238.25 236.96,-238.25"/>
 <text text-anchor="start" x="189.38" y="-225.7" font-family="Helvetica,sans-Serif" font-size="9.00">globals.css</text>
 </a>
@@ -195,7 +316,7 @@
 <!-- app/layout.tsx -->
 <g id="node7" class="node">
 <title>app/layout.tsx</title>
-<g id="a_node7"><a xlink:href="app/layout.tsx" xlink:title="layout.tsx">
+<g id="a_node7"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/app/layout.tsx" xlink:title="layout.tsx">
 <path fill="#bbfeff" stroke="black" d="M93.08,-134.25C93.08,-134.25 51.17,-134.25 51.17,-134.25 48.08,-134.25 45,-131.17 45,-128.08 45,-128.08 45,-121.92 45,-121.92 45,-118.83 48.08,-115.75 51.17,-115.75 51.17,-115.75 93.08,-115.75 93.08,-115.75 96.17,-115.75 99.25,-118.83 99.25,-121.92 99.25,-121.92 99.25,-128.08 99.25,-128.08 99.25,-131.17 96.17,-134.25 93.08,-134.25"/>
 <text text-anchor="start" x="53" y="-121.7" font-family="Helvetica,sans-Serif" font-size="9.00">layout.tsx</text>
 </a>
@@ -228,7 +349,7 @@
 <!-- app/page.tsx -->
 <g id="node8" class="node">
 <title>app/page.tsx</title>
-<g id="a_node8"><a xlink:href="app/page.tsx" xlink:title="page.tsx">
+<g id="a_node8"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/app/page.tsx" xlink:title="page.tsx">
 <path fill="#ccffcc" stroke="black" d="M92.96,-201.25C92.96,-201.25 51.29,-201.25 51.29,-201.25 48.21,-201.25 45.12,-198.17 45.12,-195.08 45.12,-195.08 45.12,-188.92 45.12,-188.92 45.12,-185.83 48.21,-182.75 51.29,-182.75 51.29,-182.75 92.96,-182.75 92.96,-182.75 96.04,-182.75 99.12,-185.83 99.12,-188.92 99.12,-188.92 99.12,-195.08 99.12,-195.08 99.12,-198.17 96.04,-201.25 92.96,-201.25"/>
 <text text-anchor="start" x="54.88" y="-188.7" font-family="Helvetica,sans-Serif" font-size="9.00">page.tsx</text>
 </a>
@@ -237,7 +358,7 @@
 <!-- src/server/DependencyInjection.ts -->
 <g id="node9" class="node">
 <title>src/server/DependencyInjection.ts</title>
-<g id="a_node9"><a xlink:href="src/server/DependencyInjection.ts" xlink:title="DependencyInjection.ts">
+<g id="a_node9"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/DependencyInjection.ts" xlink:title="DependencyInjection.ts">
 <path fill="#ddfeff" stroke="black" d="M578.58,-234.25C578.58,-234.25 478.92,-234.25 478.92,-234.25 475.83,-234.25 472.75,-231.17 472.75,-228.08 472.75,-228.08 472.75,-221.92 472.75,-221.92 472.75,-218.83 475.83,-215.75 478.92,-215.75 478.92,-215.75 578.58,-215.75 578.58,-215.75 581.67,-215.75 584.75,-218.83 584.75,-221.92 584.75,-221.92 584.75,-228.08 584.75,-228.08 584.75,-231.17 581.67,-234.25 578.58,-234.25"/>
 <text text-anchor="start" x="480.75" y="-221.7" font-family="Helvetica,sans-Serif" font-size="9.00">DependencyInjection.ts</text>
 </a>
@@ -246,7 +367,7 @@
 <!-- src/server/application/commands/CreateSkill/CreateSkillCommand.ts -->
 <g id="node10" class="node">
 <title>src/server/application/commands/CreateSkill/CreateSkillCommand.ts</title>
-<g id="a_node10"><a xlink:href="src/server/application/commands/CreateSkill/CreateSkillCommand.ts" xlink:title="CreateSkillCommand.ts">
+<g id="a_node10"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/application/commands/CreateSkill/CreateSkillCommand.ts" xlink:title="CreateSkillCommand.ts">
 <polygon fill="#dd1c1c" stroke="black" points="966.25,-185.25 853.5,-185.25 853.5,-166.75 966.25,-166.75 966.25,-185.25"/>
 <text text-anchor="start" x="861.5" y="-172.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">CreateSkillCommand.ts</text>
 </a>
@@ -261,7 +382,7 @@
 <!-- src/server/application/commands/CreateSkill/CreateSkillCommandHandler.ts -->
 <g id="node11" class="node">
 <title>src/server/application/commands/CreateSkill/CreateSkillCommandHandler.ts</title>
-<g id="a_node11"><a xlink:href="src/server/application/commands/CreateSkill/CreateSkillCommandHandler.ts" xlink:title="CreateSkillCommandHandler.ts">
+<g id="a_node11"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/application/commands/CreateSkill/CreateSkillCommandHandler.ts" xlink:title="CreateSkillCommandHandler.ts">
 <polygon fill="#dd1c1c" stroke="black" points="785.12,-216.25 640.12,-216.25 640.12,-197.75 785.12,-197.75 785.12,-216.25"/>
 <text text-anchor="start" x="648.12" y="-203.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">CreateSkillCommandHandler.ts</text>
 </a>
@@ -276,7 +397,7 @@
 <!-- src/server/application/eventHandlers/OnCreateSkillSuccessEventHandler.ts -->
 <g id="node12" class="node">
 <title>src/server/application/eventHandlers/OnCreateSkillSuccessEventHandler.ts</title>
-<g id="a_node12"><a xlink:href="src/server/application/eventHandlers/OnCreateSkillSuccessEventHandler.ts" xlink:title="OnCreateSkillSuccessEventHandler.ts">
+<g id="a_node12"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/application/eventHandlers/OnCreateSkillSuccessEventHandler.ts" xlink:title="OnCreateSkillSuccessEventHandler.ts">
 <polygon fill="#dd1c1c" stroke="black" points="798.62,-319.25 626.62,-319.25 626.62,-300.75 798.62,-300.75 798.62,-319.25"/>
 <text text-anchor="start" x="634.62" y="-306.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">OnCreateSkillSuccessEventHandler.ts</text>
 </a>
@@ -291,7 +412,7 @@
 <!-- src/server/application/ports/IdentityProviderPort.ts -->
 <g id="node13" class="node">
 <title>src/server/application/ports/IdentityProviderPort.ts</title>
-<g id="a_node13"><a xlink:href="src/server/application/ports/IdentityProviderPort.ts" xlink:title="IdentityProviderPort.ts">
+<g id="a_node13"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/application/ports/IdentityProviderPort.ts" xlink:title="IdentityProviderPort.ts">
 <polygon fill="#dd1c1c" stroke="black" points="962.5,-304.25 857.25,-304.25 857.25,-285.75 962.5,-285.75 962.5,-304.25"/>
 <text text-anchor="start" x="865.25" y="-291.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">IdentityProviderPort.ts</text>
 </a>
@@ -306,7 +427,7 @@
 <!-- src/server/application/ports/SkillRepositoryPort.ts -->
 <g id="node14" class="node">
 <title>src/server/application/ports/SkillRepositoryPort.ts</title>
-<g id="a_node14"><a xlink:href="src/server/application/ports/SkillRepositoryPort.ts" xlink:title="SkillRepositoryPort.ts">
+<g id="a_node14"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/application/ports/SkillRepositoryPort.ts" xlink:title="SkillRepositoryPort.ts">
 <polygon fill="#dd1c1c" stroke="black" points="961.38,-335.25 858.38,-335.25 858.38,-316.75 961.38,-316.75 961.38,-335.25"/>
 <text text-anchor="start" x="866.38" y="-322.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">SkillRepositoryPort.ts</text>
 </a>
@@ -321,7 +442,7 @@
 <!-- src/server/domain/events/SkillCreatedDomainEvent.ts -->
 <g id="node15" class="node">
 <title>src/server/domain/events/SkillCreatedDomainEvent.ts</title>
-<g id="a_node15"><a xlink:href="src/server/domain/events/SkillCreatedDomainEvent.ts" xlink:title="SkillCreatedDomainEvent.ts">
+<g id="a_node15"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/events/SkillCreatedDomainEvent.ts" xlink:title="SkillCreatedDomainEvent.ts">
 <polygon fill="#dc6b0d" stroke="black" points="975.25,-462.25 844.5,-462.25 844.5,-443.75 975.25,-443.75 975.25,-462.25"/>
 <text text-anchor="start" x="852.5" y="-449.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">SkillCreatedDomainEvent.ts</text>
 </a>
@@ -336,7 +457,7 @@
 <!-- src/server/infrastructure/InMemorySkillRepository.ts -->
 <g id="node16" class="node">
 <title>src/server/infrastructure/InMemorySkillRepository.ts</title>
-<g id="a_node16"><a xlink:href="src/server/infrastructure/InMemorySkillRepository.ts" xlink:title="InMemorySkillRepository.ts">
+<g id="a_node16"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/infrastructure/InMemorySkillRepository.ts" xlink:title="InMemorySkillRepository.ts">
 <polygon fill="#248cea" stroke="black" points="775.75,-485.25 649.5,-485.25 649.5,-466.75 775.75,-466.75 775.75,-485.25"/>
 <text text-anchor="start" x="657.5" y="-472.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">InMemorySkillRepository.ts</text>
 </a>
@@ -351,7 +472,7 @@
 <!-- src/server/infrastructure/UuidIdentityProvider.ts -->
 <g id="node17" class="node">
 <title>src/server/infrastructure/UuidIdentityProvider.ts</title>
-<g id="a_node17"><a xlink:href="src/server/infrastructure/UuidIdentityProvider.ts" xlink:title="UuidIdentityProvider.ts">
+<g id="a_node17"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/infrastructure/UuidIdentityProvider.ts" xlink:title="UuidIdentityProvider.ts">
 <polygon fill="#248cea" stroke="black" points="766.38,-423.25 658.88,-423.25 658.88,-404.75 766.38,-404.75 766.38,-423.25"/>
 <text text-anchor="start" x="666.88" y="-410.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">UuidIdentityProvider.ts</text>
 </a>
@@ -390,7 +511,7 @@
 <!-- src/server/application/commands/CreateSkill/CreateSkillResponse.ts -->
 <g id="node18" class="node">
 <title>src/server/application/commands/CreateSkill/CreateSkillResponse.ts</title>
-<g id="a_node18"><a xlink:href="src/server/application/commands/CreateSkill/CreateSkillResponse.ts" xlink:title="CreateSkillResponse.ts">
+<g id="a_node18"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/application/commands/CreateSkill/CreateSkillResponse.ts" xlink:title="CreateSkillResponse.ts">
 <polygon fill="#dd1c1c" stroke="black" points="965.88,-216.25 853.88,-216.25 853.88,-197.75 965.88,-197.75 965.88,-216.25"/>
 <text text-anchor="start" x="861.88" y="-203.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">CreateSkillResponse.ts</text>
 </a>
@@ -405,7 +526,7 @@
 <!-- src/server/domain/events/SkillCreationFailedDomainEvent.ts -->
 <g id="node19" class="node">
 <title>src/server/domain/events/SkillCreationFailedDomainEvent.ts</title>
-<g id="a_node19"><a xlink:href="src/server/domain/events/SkillCreationFailedDomainEvent.ts" xlink:title="SkillCreationFailedDomainEvent.ts">
+<g id="a_node19"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/events/SkillCreationFailedDomainEvent.ts" xlink:title="SkillCreationFailedDomainEvent.ts">
 <polygon fill="#dc6b0d" stroke="black" points="989.12,-431.25 830.62,-431.25 830.62,-412.75 989.12,-412.75 989.12,-431.25"/>
 <text text-anchor="start" x="838.62" y="-418.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">SkillCreationFailedDomainEvent.ts</text>
 </a>
@@ -420,7 +541,7 @@
 <!-- src/server/domain/Skill.ts -->
 <g id="node20" class="node">
 <title>src/server/domain/Skill.ts</title>
-<g id="a_node20"><a xlink:href="src/server/domain/Skill.ts" xlink:title="Skill.ts">
+<g id="a_node20"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/Skill.ts" xlink:title="Skill.ts">
 <polygon fill="#dc6b0d" stroke="black" points="936.88,-515.25 882.88,-515.25 882.88,-496.75 936.88,-496.75 936.88,-515.25"/>
 <text text-anchor="start" x="896.75" y="-502.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">Skill.ts</text>
 </a>
@@ -435,7 +556,7 @@
 <!-- src/server/domain/SkillId.ts -->
 <g id="node21" class="node">
 <title>src/server/domain/SkillId.ts</title>
-<g id="a_node21"><a xlink:href="src/server/domain/SkillId.ts" xlink:title="SkillId.ts">
+<g id="a_node21"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/SkillId.ts" xlink:title="SkillId.ts">
 <polygon fill="#dc6b0d" stroke="black" points="1064.88,-434.25 1010.88,-434.25 1010.88,-415.75 1064.88,-415.75 1064.88,-434.25"/>
 <text text-anchor="start" x="1021" y="-421.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">SkillId.ts</text>
 </a>
@@ -474,7 +595,7 @@
 <!-- src/server/domain/errors/SkillNotFoundDomainError.ts -->
 <g id="node26" class="node">
 <title>src/server/domain/errors/SkillNotFoundDomainError.ts</title>
-<g id="a_node26"><a xlink:href="src/server/domain/errors/SkillNotFoundDomainError.ts" xlink:title="SkillNotFoundDomainError.ts">
+<g id="a_node26"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/errors/SkillNotFoundDomainError.ts" xlink:title="SkillNotFoundDomainError.ts">
 <polygon fill="#dc6b0d" stroke="black" points="1221.12,-488.25 1086.62,-488.25 1086.62,-469.75 1221.12,-469.75 1221.12,-488.25"/>
 <text text-anchor="start" x="1094.62" y="-475.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">SkillNotFoundDomainError.ts</text>
 </a>
@@ -495,7 +616,7 @@
 <!-- src/server/domain/errors/index.ts -->
 <g id="node22" class="node">
 <title>src/server/domain/errors/index.ts</title>
-<g id="a_node22"><a xlink:href="src/server/domain/errors/index.ts" xlink:title="index.ts">
+<g id="a_node22"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/errors/index.ts" xlink:title="index.ts">
 <polygon fill="#dc6b0d" stroke="black" points="1180.88,-457.25 1126.88,-457.25 1126.88,-438.75 1180.88,-438.75 1180.88,-457.25"/>
 <text text-anchor="start" x="1138.12" y="-444.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">index.ts</text>
 </a>
@@ -522,7 +643,7 @@
 <!-- src/server/domain/SkillLabel.ts -->
 <g id="node23" class="node">
 <title>src/server/domain/SkillLabel.ts</title>
-<g id="a_node23"><a xlink:href="src/server/domain/SkillLabel.ts" xlink:title="SkillLabel.ts">
+<g id="a_node23"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/SkillLabel.ts" xlink:title="SkillLabel.ts">
 <polygon fill="#dc6b0d" stroke="black" points="1070.62,-510.25 1005.12,-510.25 1005.12,-491.75 1070.62,-491.75 1070.62,-510.25"/>
 <text text-anchor="start" x="1013.12" y="-497.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">SkillLabel.ts</text>
 </a>
@@ -537,7 +658,7 @@
 <!-- src/server/domain/errors/SkillLabelCreationError.ts -->
 <g id="node25" class="node">
 <title>src/server/domain/errors/SkillLabelCreationError.ts</title>
-<g id="a_node25"><a xlink:href="src/server/domain/errors/SkillLabelCreationError.ts" xlink:title="SkillLabelCreationError.ts">
+<g id="a_node25"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/errors/SkillLabelCreationError.ts" xlink:title="SkillLabelCreationError.ts">
 <polygon fill="#dc6b0d" stroke="black" points="1354.38,-472.25 1234.12,-472.25 1234.12,-453.75 1354.38,-453.75 1354.38,-472.25"/>
 <text text-anchor="start" x="1242.12" y="-459.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">SkillLabelCreationError.ts</text>
 </a>
@@ -558,7 +679,7 @@
 <!-- src/server/domain/errors/SkillLabelTooShortError.ts -->
 <g id="node24" class="node">
 <title>src/server/domain/errors/SkillLabelTooShortError.ts</title>
-<g id="a_node24"><a xlink:href="src/server/domain/errors/SkillLabelTooShortError.ts" xlink:title="SkillLabelTooShortError.ts">
+<g id="a_node24"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/domain/errors/SkillLabelTooShortError.ts" xlink:title="SkillLabelTooShortError.ts">
 <polygon fill="#dc6b0d" stroke="black" points="1489.12,-472.25 1367.38,-472.25 1367.38,-453.75 1489.12,-453.75 1489.12,-472.25"/>
 <text text-anchor="start" x="1375.38" y="-459.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">SkillLabelTooShortError.ts</text>
 </a>
@@ -579,7 +700,7 @@
 <!-- src/server/infrastructure/PostgresSkillRepository.ts -->
 <g id="node27" class="node">
 <title>src/server/infrastructure/PostgresSkillRepository.ts</title>
-<g id="a_node27"><a xlink:href="src/server/infrastructure/PostgresSkillRepository.ts" xlink:title="PostgresSkillRepository.ts">
+<g id="a_node27"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/infrastructure/PostgresSkillRepository.ts" xlink:title="PostgresSkillRepository.ts">
 <polygon fill="#248cea" stroke="black" points="773.5,-454.25 651.75,-454.25 651.75,-435.75 773.5,-435.75 773.5,-454.25"/>
 <text text-anchor="start" x="659.75" y="-441.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">PostgresSkillRepository.ts</text>
 </a>
@@ -600,7 +721,7 @@
 <!-- src/server/presentation/controllers/serverActions/createSkillAction.ts -->
 <g id="node28" class="node">
 <title>src/server/presentation/controllers/serverActions/createSkillAction.ts</title>
-<g id="a_node28"><a xlink:href="src/server/presentation/controllers/serverActions/createSkillAction.ts" xlink:title="createSkillAction.ts">
+<g id="a_node28"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/presentation/controllers/serverActions/createSkillAction.ts" xlink:title="createSkillAction.ts">
 <polygon fill="#20b520" stroke="black" points="437.5,-127.25 344.25,-127.25 344.25,-108.75 437.5,-108.75 437.5,-127.25"/>
 <text text-anchor="start" x="352.25" y="-114.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">createSkillAction.ts</text>
 </a>
@@ -627,7 +748,7 @@
 <!-- src/server/presentation/viewModels/CreateSkillViewModel.ts -->
 <g id="node29" class="node">
 <title>src/server/presentation/viewModels/CreateSkillViewModel.ts</title>
-<g id="a_node29"><a xlink:href="src/server/presentation/viewModels/CreateSkillViewModel.ts" xlink:title="CreateSkillViewModel.ts">
+<g id="a_node29"><a xlink:href="https://github.com/Evyweb/millionaire-clone/blob/master/src/server/presentation/viewModels/CreateSkillViewModel.ts" xlink:title="CreateSkillViewModel.ts">
 <polygon fill="#20b520" stroke="black" points="586.62,-119.25 470.88,-119.25 470.88,-100.75 586.62,-100.75 586.62,-119.25"/>
 <text text-anchor="start" x="478.88" y="-106.7" font-family="Helvetica,sans-Serif" font-size="9.00" fill="white">CreateSkillViewModel.ts</text>
 </a>
@@ -641,3 +762,294 @@
 </g>
 </g>
 </svg>
+    <script>
+      var gMode = new Mode();
+
+var title2ElementMap = (function makeElementMap() {
+  /** @type {NodeListOf<SVGGElement>} */
+  var nodes = document.querySelectorAll(".node");
+  /** @type {NodeListOf<SVGGElement>} */
+  var edges = document.querySelectorAll(".edge");
+  return new Title2ElementMap(edges, nodes);
+})();
+
+function getHoverHandler(pTitle2ElementMap) {
+  /** @type {string} */
+  var currentHighlightedTitle = "";
+
+  /** @param {MouseEvent} pMouseEvent */
+  return function hoverHighlightHandler(pMouseEvent) {
+    var closestNodeOrEdge = pMouseEvent.target.closest(".edge, .node");
+    var closestTitleText = getTitleText(closestNodeOrEdge);
+
+    if (
+      currentHighlightedTitle !== closestTitleText &&
+      gMode.get() === gMode.HOVER
+    ) {
+      resetNodesAndEdges();
+      addHighlight(closestNodeOrEdge);
+      pTitle2ElementMap.get(closestTitleText).forEach(addHighlight);
+      currentHighlightedTitle = closestTitleText;
+    }
+  };
+}
+
+function getSelectHandler(pTitle2ElementMap) {
+  /** @type {string} */
+  var currentHighlightedTitle = "";
+
+  /** @param {MouseEvent} pMouseEvent */
+  return function selectHighlightHandler(pMouseEvent) {
+    pMouseEvent.preventDefault();
+
+    var closestNodeOrEdge = pMouseEvent.target.closest(".edge, .node");
+    var closestTitleText = getTitleText(closestNodeOrEdge);
+
+    if (closestNodeOrEdge) {
+      gMode.setToSelect();
+    } else {
+      gMode.setToHover();
+    }
+    if (currentHighlightedTitle !== closestTitleText) {
+      resetNodesAndEdges();
+      addHighlight(closestNodeOrEdge);
+      pTitle2ElementMap.get(closestTitleText).forEach(addHighlight);
+      currentHighlightedTitle = closestTitleText;
+    }
+  };
+}
+function Mode() {
+  var HOVER = 1;
+  var SELECT = 2;
+
+  function setToHover() {
+    this._mode = HOVER;
+  }
+  function setToSelect() {
+    this._mode = SELECT;
+  }
+
+  /**
+   * @returns {number}
+   */
+  function get() {
+    return this._mode || HOVER;
+  }
+
+  return {
+    HOVER: HOVER,
+    SELECT: SELECT,
+    setToHover: setToHover,
+    setToSelect: setToSelect,
+    get: get,
+  };
+}
+
+/**
+ *
+ * @param {SVGGelement[]} pEdges
+ * @param {SVGGElement[]} pNodes
+ * @return {{get: (pTitleText:string) => SVGGElement[]}}
+ */
+function Title2ElementMap(pEdges, pNodes) {
+  /* {{[key: string]: SVGGElement[]}} */
+  var elementMap = buildMap(pEdges, pNodes);
+
+  /**
+   * @param {NodeListOf<SVGGElement>} pEdges
+   * @param {NodeListOf<SVGGElement>} pNodes
+   * @return {{[key: string]: SVGGElement[]}}
+   */
+  function buildMap(pEdges, pNodes) {
+    var title2NodeMap = buildTitle2NodeMap(pNodes);
+
+    return nodeListToArray(pEdges).reduce(addEdgeToMap(title2NodeMap), {});
+  }
+  /**
+   * @param {NodeListOf<SVGGElement>} pNodes
+   * @return {{[key: string]: SVGGElement}}
+   */
+  function buildTitle2NodeMap(pNodes) {
+    return nodeListToArray(pNodes).reduce(addNodeToMap, {});
+  }
+
+  function addNodeToMap(pMap, pNode) {
+    var titleText = getTitleText(pNode);
+
+    if (titleText) {
+      pMap[titleText] = pNode;
+    }
+    return pMap;
+  }
+
+  function addEdgeToMap(pNodeMap) {
+    return function (pEdgeMap, pEdge) {
+      /** @type {string} */
+      var titleText = getTitleText(pEdge);
+
+      if (titleText) {
+        var edge = pryEdgeFromTitle(titleText);
+
+        pEdgeMap[titleText] = [pNodeMap[edge.from], pNodeMap[edge.to]];
+        (pEdgeMap[edge.from] || (pEdgeMap[edge.from] = [])).push(pEdge);
+        (pEdgeMap[edge.to] || (pEdgeMap[edge.to] = [])).push(pEdge);
+      }
+      return pEdgeMap;
+    };
+  }
+
+  /**
+   *
+   * @param {string} pString
+   * @return {{from?: string; to?:string;}}
+   */
+  function pryEdgeFromTitle(pString) {
+    var nodeNames = pString.split(/\s*->\s*/);
+
+    return {
+      from: nodeNames.shift(),
+      to: nodeNames.shift(),
+    };
+  }
+  /**
+   *
+   * @param {string} pTitleText
+   * @return {SVGGElement[]}
+   */
+  function get(pTitleText) {
+    return (pTitleText && elementMap[pTitleText]) || [];
+  }
+  return {
+    get: get,
+  };
+}
+
+/**
+ * @param {SVGGElement} pGElement
+ * @return {string?}
+ */
+function getTitleText(pGElement) {
+  /** @type {SVGTitleElement} */
+  var title = pGElement && pGElement.querySelector("title");
+  /** @type {string} */
+  var titleText = title && title.textContent;
+
+  if (titleText) {
+    titleText = titleText.trim();
+  }
+  return titleText;
+}
+
+/**
+ * @param {NodeListOf<Element>} pNodeList
+ * @return {Element[]}
+ */
+function nodeListToArray(pNodeList) {
+  var lReturnValue = [];
+
+  pNodeList.forEach(function (pElement) {
+    lReturnValue.push(pElement);
+  });
+
+  return lReturnValue;
+}
+
+function resetNodesAndEdges() {
+  nodeListToArray(document.querySelectorAll(".current")).forEach(
+    removeHighlight,
+  );
+}
+
+/**
+ * @param {SVGGElement} pGElement
+ */
+function removeHighlight(pGElement) {
+  if (pGElement && pGElement.classList) {
+    pGElement.classList.remove("current");
+  }
+}
+
+/**
+ * @param {SVGGElement} pGroup
+ */
+function addHighlight(pGroup) {
+  if (pGroup && pGroup.classList) {
+    pGroup.classList.add("current");
+  }
+}
+
+var gHints = {
+  HIDDEN: 1,
+  SHOWN: 2,
+  state: 1, // === HIDDEN
+  show: function () {
+    document.getElementById("hints").removeAttribute("style");
+    gHints.state = gHints.SHOWN;
+  },
+  hide: function () {
+    document.getElementById("hints").style = "display:none";
+    gHints.state = gHints.HIDDEN;
+  },
+  toggle: function () {
+    if ((gHints.state || gHints.HIDDEN) === gHints.HIDDEN) {
+      gHints.show();
+    } else {
+      gHints.hide();
+    }
+  },
+};
+
+/** @param {KeyboardEvent} pKeyboardEvent */
+function keyboardEventHandler(pKeyboardEvent) {
+  if (pKeyboardEvent.key === "Escape") {
+    resetNodesAndEdges();
+    gMode.setToHover();
+    gHints.hide();
+  }
+  if (pKeyboardEvent.key === "F1") {
+    pKeyboardEvent.preventDefault();
+    gHints.toggle();
+  }
+}
+
+document.addEventListener("contextmenu", getSelectHandler(title2ElementMap));
+document.addEventListener("mouseover", getHoverHandler(title2ElementMap));
+document.addEventListener("keydown", keyboardEventHandler);
+document.getElementById("close-hints").addEventListener("click", gHints.hide);
+document.getElementById("button_help").addEventListener("click", gHints.toggle);
+document.querySelector("svg").insertAdjacentHTML(
+  "afterbegin",
+  `<linearGradient id="edgeGradient">
+      <stop offset="0%" stop-color="fuchsia"/>
+      <stop offset="100%" stop-color="purple"/>
+   </linearGradient>
+  `,
+);
+
+// Add a small increment to the last value of the path to make gradients on
+// horizontal paths work. Without them all browsers I tested with (firefox,
+// chrome) do not render the gradient, but instead make the line transparent
+// (or the color of the background, I haven't looked into it that deeply,
+// but for the hack it doesn't matter which).
+function skewLineABit(lDrawingInstructions) {
+  var lLastValue = lDrawingInstructions.match(/(\d+\.?\d*)$/)[0];
+  // Smaller values than .001 _should_ work as well, but don't in all
+  // cases. Even this value is so small that it is not visible to the
+  // human eye (tested with the two I have at my disposal).
+  var lIncrement = 0.001;
+  var lNewLastValue = parseFloat(lLastValue) + lIncrement;
+
+  return lDrawingInstructions.replace(lLastValue, lNewLastValue);
+}
+
+nodeListToArray(document.querySelectorAll("path"))
+  .filter(function (pElement) {
+    return pElement.parentElement.classList.contains("edge");
+  })
+  .forEach(function (pElement) {
+    pElement.attributes.d.value = skewLineABit(pElement.attributes.d.value);
+  });
+
+    </script>
+  </body>
+</html>
