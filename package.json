@@ -1,0 +1,52 @@
+{
+  "name": "nextjs-15-clean-architecture-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deps:all": "npm run deps:screenshot && npm run deps:graph && npm run deps:github && npm run deps:server && npm run deps:client",
+    "deps:github": "node tools/github.js",
+    "deps:graph": "npx depcruise . --include-only \"^src|^app\" --output-type dot | dot -T svg | depcruise-wrap-stream-in-html > tools/index.html",
+    "deps:screenshot": "npx depcruise . --include-only \"^src|^app\" --output-type dot | dot -T svg > assets/deps.svg",
+    "deps:server": "npx depcruise . --include-only \"^src/server|^app\" --output-type dot | dot -T svg | depcruise-wrap-stream-in-html > tools/server-dependency-graph.html",
+    "deps:client": "npx depcruise . --include-only \"^src/client|^app\" --output-type dot | dot -T svg | depcruise-wrap-stream-in-html > tools/client-dependency-graph.html",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@evyweb/ioctopus": "^1.2.0",
+    "@formkit/auto-animate": "^0.8.2",
+    "@radix-ui/react-icons": "^1.3.2",
+    "@radix-ui/themes": "^3.1.6",
+    "@tanstack/react-query": "^5.62.3",
+    "@tanstack/react-query-devtools": "^5.62.3",
+    "next": "^15.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.14",
+    "@types/react-dom": "^18.3.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^2.1.8",
+    "dependency-cruiser": "^16.7.0",
+    "eslint": "^9.16.0",
+    "eslint-config-next": "15.0.4",
+    "jest-extended": "^4.0.2",
+    "jsdom": "^25.0.1",
+    "msw": "^2.6.8",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "^5.7.2",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^2.1.8",
+    "vitest-mock-extended": "^2.0.2"
+  }
+}

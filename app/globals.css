@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Input {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 0 10px;
+  height: 40px;
+  font-size: 15px;
+  line-height: 1;
+  color: white;
+  background-color: var(--black-a2);
+  box-shadow: 0 0 0 1px var(--black-a6);
+}
+
+.Input:focus {
+  box-shadow: 0 0 0 2px black;
+}
+
+.Input::selection {
+  background-color: var(--black-a6);
+  color: white;
+}
